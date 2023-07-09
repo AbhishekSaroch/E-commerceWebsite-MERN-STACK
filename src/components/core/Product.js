@@ -8,6 +8,7 @@ const Product = ({ item }) => {
 
   const addtocart=()=>{
       dispatch(add(item))
+      
   }
   const removefromcart = () => {
     dispatch(remove(item.id));

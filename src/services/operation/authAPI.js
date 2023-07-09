@@ -53,10 +53,10 @@ export function login(email,password,navigate){
               }
               dispatch(setToken(response.data.token))
               localStorage.setItem("token", JSON.stringify(response.data.token))
-            //   const userImage = response.data?.user?.image
-            //   ? response.data.user.image
-            //   : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`
-            //   localStorage.setItem("token", JSON.stringify(response.data.token))
+              const userImage = response.data?.user?.image
+              ? response.data.user.image
+              : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`
+              localStorage.setItem("token", JSON.stringify(response.data.token))
               navigate("/home")
         } catch (error) {
             console.log("LOGIN API ERROR............", error)

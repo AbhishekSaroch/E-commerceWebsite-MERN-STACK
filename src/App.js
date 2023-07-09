@@ -15,8 +15,8 @@ const App = () => {
       <NavBar />
       <Routes>     
   
-          {token==null && <Route path="/" element={<Intro />}/>}
-          {token!=null && <Route path="/home" element={<Home />}/>}
+           <Route path="/" element={<Intro />}/>
+          <Route path="/home" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<SignUp />}/>
         <Route path="/cart" element={<Cart />}/>
